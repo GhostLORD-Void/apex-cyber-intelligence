@@ -5,9 +5,9 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 MAX_TEXT_CHARS = 1_000_000
-URL_RE = re.compile(r"(?i)\\b(?:https?://|www\\.)[^\\s<>\"']+")
-EMAIL_RE = re.compile(r"\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b", re.I)
-IP_RE = re.compile(r"(?<![\\w.])(?:\\d{1,3}\\.){3}\\d{1,3}(?![\\w.])")
+URL_RE = re.compile(r"""(?i)\b(?:https?://|www\.)[^\s<>"']+""")
+EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I)
+IP_RE = re.compile(r"(?<![\w.])(?:\d{1,3}\.){3}\d{1,3}(?![\w.])")
 SUSPICIOUS_TERMS = ("powershell -enc", "mimikatz", "credential dump", "ransom note", "disable antivirus")
 
 def sha256_bytes(data: bytes) -> str:
