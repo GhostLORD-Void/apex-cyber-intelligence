@@ -1,6 +1,10 @@
 """Command-line offline evidence triage."""
-import argparse, json
+import argparse
+import json
+from pathlib import Path
+
 from .core import analyze_file
+
 
 def main():
     parser = argparse.ArgumentParser(description="APEX offline file triage")
@@ -12,9 +16,10 @@ def main():
     if args.out == "-":
         print(report)
     else:
-        with open(args.out, "w", encoding="utf-8") as handle:
-            handle.write(report + "\\n")
-        print(f"Report written to {args.out}")
+        output_path = Path(args.out)
+        output_path.write_text(report + "\n", encoding="utf-8")
+        print(f"Report written to {output_path}")
+
 
 if __name__ == "__main__":
     main()
