@@ -12,7 +12,7 @@ if (!TOKEN) {
   process.exit(1);
 }
 app.use("/mcp", (req, res, next) => {
-  if (req.headers.authorization !== \`Bearer \${TOKEN}\`) {
+  if (req.headers.authorization !== "Bearer " + TOKEN) {
     res.setHeader("WWW-Authenticate", "Bearer");
     return res.status(401).json({ error: "Unauthorized" });
   }
@@ -51,4 +51,4 @@ app.post("/mcp", (req, res) => transport.handleRequest(req, res, req.body));
 app.get("/mcp", (_req, res) => res.status(405).json({ error: "Use POST for stateless MCP requests" }));
 app.delete("/mcp", (_req, res) => res.status(405).json({ error: "Stateless endpoint" }));
 app.get("/health", (_req, res) => res.json({ status: "ok", endpoint: "/mcp" }));
-app.listen(PORT, "127.0.0.1", () => console.log(\`APEX MCP listening on 127.0.0.1:\${PORT}/mcp\`));
+app.listen(PORT, "127.0.0.1", () => console.log("APEX MCP listening on 127.0.0.1:" + PORT + "/mcp"));
