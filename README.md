@@ -1,4 +1,19 @@
 # APEX Cyber Intelligence
+<!-- GHOSTLORD-VOID-BRAND-HEADER -->
+<div align="center">
+
+**PROFESSIONAL AI & CYBERSECURITY DEVELOPER ECOSYSTEM**
+
+**BUILD INTELLIGENT. SECURE BY DESIGN.**
+
+`VOID BLACK #080811` · `NEON VIOLET #A855F7` · `ELECTRIC CYAN #22D3EE`
+
+DEFENSIVE SECURITY · PYTHON · CLI · MCP
+
+</div>
+
+---
+
 
 A cross-platform, local-first security research workbench. The initial release focuses on **defensive analysis and explicitly authorized lab workflows**: evidence hashing, static file triage, URL/domain parsing without network contact, scope validation, and reproducible JSON reports.
 
@@ -85,3 +100,14 @@ scripts/       Termux helper
 4. Benchmark harness for evaluating analysis quality (no autonomous self-modification)
 
 Contributions should include tests and must preserve the authorization and safety boundaries.
+
+<!-- GHOSTLORD-VOID-BRAND-FOOTER -->
+
+---
+
+<div align="center">
+
+**GHOSTLORD-VOID** · PROFESSIONAL AI & CYBERSECURITY DEVELOPER ECOSYSTEM
+BUILD INTELLIGENT. SECURE BY DESIGN.
+
+</div>
